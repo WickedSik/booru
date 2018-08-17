@@ -2,7 +2,8 @@
   "name": "booru",
   "version": "0.4.0",
   "description": "Search a bunch of different boorus using package magic!",
-  "main": "index.js",
+  "main": "build/bundle.js",
+  "module": "build/bundle.module.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard example.js index.js"
@@ -36,10 +37,29 @@
   },
   "homepage": "https://github.com/AtlasTheBot/booru#readme",
   "dependencies": {
-    "snekfetch": "^3.6.4",
+    "node-fetch": "^2.2.0",
     "xml2js": "^0.4.17"
   },
   "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "20.0.3",
+    "babel-loader": "7.1.2",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-config-standard-react": "^6.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-json": "^3.0.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
     "standard": "^10.0.3"
   }
 }

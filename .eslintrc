@@ -1,0 +1,33 @@
+{
+    "env": {
+        "jest": true,
+        "browser": true
+    },
+    "extends": [
+        "standard"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "sourceType": "module",
+        "allowImportExportEverywhere": false,
+        "codeFrame": false
+    },
+    "globals": {
+        "__DEV__": true
+    },
+    "rules": {
+        "indent": [1, 4],
+        "no-class-assign": 0,
+        "camelcase": [
+            0,
+            {
+                "properties": "never"
+            }
+        ],
+        "space-before-function-paren": [
+            "error",
+            "never"
+        ],
+        "generator-star-spacing": 0
+    }
+}
