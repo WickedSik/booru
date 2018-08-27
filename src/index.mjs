@@ -285,10 +285,7 @@ export default class Booru {
             }
 
             fetch(uri, options)
-                .then(result => {
-                    console.info('-- result', result)
-                    return result.json()
-                })
+                .then(result => result.json())
                 .then(resolve)
                 .catch(err => reject(new BooruError((err.error && err.error.message) || err.error || err)))
         })
