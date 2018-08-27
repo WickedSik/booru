@@ -6,7 +6,8 @@
   "module": "build/bundle.module.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "standard example.js index.js"
+    "lint": "standard example.js index.js",
+    "prepublish": "rollup -c rollup.config.js"
   },
   "repository": {
     "type": "git",

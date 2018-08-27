@@ -267,4 +267,30 @@ export default class Booru {
             }
         })
     }
+
+    /**
+     * For some reason, this won't return anything but `null`
+     * @param {String} site
+     * @param {String} md5
+     */
+    show(site, md5) {
+        return new Promise((resolve, reject) => {
+            site = Booru.resolveSite(site)
+
+            let uri = `https://${site}${sites[site].api.replace('index', 'show')}md5=${md5}`
+            let options = {
+                headers: {
+                    'User-Agent': 'Booru, a node package for booru searching (by AtlasTheBot)'
+                }
+            }
+
+            fetch(uri, options)
+                .then(result => {
+                    console.info('-- result', result)
+                    return result.json()
+                })
+                .then(resolve)
+                .catch(err => reject(new BooruError((err.error && err.error.message) || err.error || err)))
+        })
+    }
 }
