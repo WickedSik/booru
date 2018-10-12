@@ -1,6 +1,6 @@
 {
-  "name": "booru",
-  "version": "0.4.0",
+  "name": "es6-booru",
+  "version": "0.4.1",
   "description": "Search a bunch of different boorus using package magic!",
   "main": "build/bundle.js",
   "module": "build/bundle.module.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/AtlasTheBot/booru.git"
+    "url": "git@github.com:WickedSik/booru.git"
   },
   "keywords": [
     "booru",
@@ -34,9 +34,9 @@
   "author": "AtlasTheBot",
   "license": "GPL-3.0+",
   "bugs": {
-    "url": "https://github.com/AtlasTheBot/booru/issues"
+    "url": "https://github.com/WickedSik/booru/issues"
   },
-  "homepage": "https://github.com/AtlasTheBot/booru#readme",
+  "homepage": "https://github.com/WickedSik/booru#readme",
   "dependencies": {
     "node-fetch": "^2.2.0",
     "xml2js": "^0.4.17"
