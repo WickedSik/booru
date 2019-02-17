@@ -223,14 +223,16 @@ export default class Booru {
 
             let uri = `http://${site}${sites[site].api}${(sites[site].tagQuery) ? sites[site].tagQuery : 'tags'}=${tags.join('+')}&limit=${limit}`
             let options = {
-                headers: {'User-Agent': 'Booru, a node package for booru searching (by AtlasTheBot)'}
+                headers: {'User-Agent': 'Booru, a node package for booru searching (by AtlasTheBot)'},
+                gzip: true,
+                json: true
             }
 
             if (!random) {
                 resolve(
                     fetch(uri, options)
-                        .then(result => result.body)
-                        .catch(err => reject(new BooruError(err.error.message || err.error)))
+                        .then(result => result.json())
+                        .catch(err => reject(new BooruError(err.message || (err.error && err.error.message) || err.error)))
                 )
             }
 

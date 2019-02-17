@@ -1,6 +1,6 @@
 {
   "name": "es6-booru",
-  "version": "0.4.2",
+  "version": "0.4.4",
   "description": "Search a bunch of different boorus using package magic!",
   "main": "build/bundle.js",
   "module": "build/bundle.module.js",
